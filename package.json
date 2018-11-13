@@ -1,0 +1,30 @@
+{
+  "name": "cypress-workshop",
+  "version": "1.0.0",
+  "description": "Cypress.io workshop",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cypress open",
+    "test": "cypress run",
+    "lint": "eslint cypress/",
+    "stop-only": "stop-only --folder cypress/integration --skip node_modules"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run stop-only && pretty-quick --staged"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^3.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-cypress": "^2.0.1",
+    "husky": "^1.1.1",
+    "prettier": "^1.14.3",
+    "pretty-quick": "^1.7.0"
+  }
+}

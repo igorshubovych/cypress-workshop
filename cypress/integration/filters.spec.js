@@ -1,6 +1,7 @@
-describe ('Filters', () => {
+describe('Filters', () => {
   beforeEach(() => {
-    cy.stubAndVisit();
+    // cy.stubAndVisit();
+    cy.visit('/');
   });
 
   it('should have filters invisible initially', () => {
@@ -17,8 +18,8 @@ describe ('Filters', () => {
 
   context('Filters clicking', () => {
     beforeEach(() => {
-      for(let i=0; i<5; i++) {
-        cy.addTodo(`Item ${i+1}`, { log: false });
+      for (let i = 0; i < 5; i++) {
+        cy.addTodo(`Item ${i + 1}`, { log: false });
       }
     });
 
@@ -58,13 +59,13 @@ describe ('Filters', () => {
         .first()
         .contains('label', 'Item 1')
         .should('have.css', 'text-decoration')
-          .and('match', /line-through/);
+        .and('match', /line-through/);
 
       cy.get('li.todo')
         .eq(1)
         .contains('label', 'Item 2')
         .should('have.css', 'text-decoration')
-          .and('match', /solid/);
+        .and('match', /solid/);
     });
   });
 });

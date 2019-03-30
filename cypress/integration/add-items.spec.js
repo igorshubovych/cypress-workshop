@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+/// <reference types="Cypress" />
 
 describe('Adding items', () => {
   beforeEach(() => {

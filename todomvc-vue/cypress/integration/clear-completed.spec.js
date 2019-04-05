@@ -1,7 +1,7 @@
 describe('Clear completed', () => {
   beforeEach(() => {
-    // cy.stubAndVisit();
-    cy.visit('/');
+    cy.stubAndVisit();
+    // cy.visit('/');
   });
 
   it('should remove completed items from list after button clicked', () => {

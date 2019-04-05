@@ -2,8 +2,8 @@
 
 describe('Adding items', () => {
   beforeEach(() => {
-    cy.visit('/');
-    // cy.stubAndVisit();
+    // cy.visit('/');
+    cy.stubAndVisit();
   });
 
   it('should start with 0 items', () => {
